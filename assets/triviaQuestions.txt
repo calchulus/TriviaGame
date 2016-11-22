@@ -1,0 +1,128 @@
+Trivia Questions: 
+
+In database programming, SQL is an acronym for what?
+
+Structured Query Language
+
+----
+
+In computer science, what does "GUI" stand for?
+
+Graphical user interface
+
+----
+
+What year was Facebook founded?
+
+2004
+
+----
+
+In the world of video games, what does NES stand for?
+
+Nintendo Entertainment System
+
+----
+
+The companies HP, Microsoft and Apple were all started in a what?
+
+Garage
+wrong answers:
+Kitchen
+Public Restroom
+Classroom
+
+----
+
+What is the name of the main protagonist in the Legend of Zelda series of video games?
+
+Link
+wrong answers:
+Mario
+Kirby
+Donkey Kong
+
+----
+
+Fonts that contain small decorative lines at the end of a stroke are known as what?
+
+Serif Fonts
+wrong answers:
+Sans Serif Fonts
+Helvetica Fonts
+Standard Fonts
+
+----
+
+In what year was the iPhone first released?
+
+2007
+
+----
+
+When referring to computer memory, what does that acronym RAM stand for?
+
+Random Access Memory
+
+----
+
+What do the letters HTML, a markup language used to create web pages, stand for?
+
+Hypertext Markup Language
+
+----
+
+With over 17 million units produced, what was the highest selling single model of personal computer ever?
+
+The Commodore 64
+wrong answers:
+Apple 2
+
+----
+
+Who is credited with inventing the first mechanical computer?
+
+Charles Babbage
+
+----
+
+1,024 Gigabytes is equal to one what?
+
+Terabyte
+wrong answers:
+1.21 gigawatts
+
+----
+
+In what year was the Nintendo 64 officially released?
+
+1996
+
+----
+
+What is the name given to an ancient analog computer that was discovered by divers off a Greek island in 1900?
+
+Antikythera mechanism
+
+----
+
+What Harvard dropout co-founded Microsoft?
+
+Bill Gates
+wrong answers:
+Steve Jobs
+Steve Wozniak
+Elon Musk
+----
+
+What was the name of the first electronic general-purpose computer?
+
+ENIAC
+
+----
+
+What does HTTP stand for in a website address?
+
+HyperText Transfer Protocol
+
+----

@@ -1,0 +1,58 @@
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	background-image: url("../images/background.jpg");
+	background-size: 100%;
+}
+.navbar-default {
+	background-color: #84828f;
+	border: 2px solid #84828f;
+	border-radius: 0px;
+}
+nav h1 {
+	color: #feebfe;
+}
+.container {
+	height: 80%;
+}
+.row {
+	height: 100%;
+}
+.col-md-8 {
+	background-color: #6A687A;
+	height: 100%;
+}
+.btn {
+	border-radius: 0px;
+	margin-top: 200px;
+	height: 50px;
+	font-weight: bold;
+	background-color: #feebfe;
+}
+.btn:hover {
+	color: #6A687A;
+}
+#main {
+	visibility: hidden;
+	color: #feebfe;
+	font-weight: bold;
+}
+#timeRemaining {
+	margin-top: 50px;
+}
+#question {
+	margin-top: 30px;
+}
+#answers {
+	margin-top: 50px;
+}
+#answers p {
+	font-size: 1.5em;
+	font-weight: normal;
+	margin-bottom: 20px;
+}
+#answers p:hover {
+	border: 2px solid #feebfe;
+}
