@@ -57,7 +57,7 @@ $(document).ready(function() {
     var n = 0;
     var key = keys[n];
 
-    var time = 5;
+    var time = 30;
     var correct = 0;
     var wrong = 0;
     var outOfTime = 0;
@@ -69,7 +69,7 @@ $(document).ready(function() {
             var timeDiv = $("<div id='timeRemaining'><h3></h3></div>");
             var questionDiv = $("<div id='question'><h3></h3></div>");
             var answerDiv = $("<div id='answers'></div>");
-            time = 5;
+            time = 30;
             $("#main").empty();
             $("#main").append(timeDiv);
             $("#timeRemaining h3").html("Time Remaining: " + time);
@@ -153,6 +153,6 @@ $(document).ready(function() {
         }
     });
 
-    //need to make the last question show the results
+    //TODO need to make the last question show Correct/Incorrect/Out of time screen
 
 });
