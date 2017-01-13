@@ -163,6 +163,7 @@ $(document).ready(function() {
 
         function displayFinalScore() {
             $("#correct-answer").remove();
+            $("#startButton").css("margin-top", "20px");
             $("#startButton").css("display", "inline");
             $("#main").prepend("<h2>Ran out of time on: " + outOfTime + "</h2>");
             $("#main").prepend("<h2>Wrong Answers: " + wrong + "</h2>");
