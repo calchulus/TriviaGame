@@ -30,12 +30,12 @@ nav h1 {
 	height: 50px;
 	font-weight: bold;
 	background-color: #feebfe;
+	color: black;
 }
 .btn:hover {
 	color: #6A687A;
 }
 #main {
-	visibility: hidden;
 	color: #feebfe;
 	font-weight: bold;
 }
@@ -55,4 +55,8 @@ nav h1 {
 }
 #answers p:hover {
 	border: 2px solid #feebfe;
+}
+#correct-answer {
+	margin-top: 200px;
+	font-size: 3em;
 }

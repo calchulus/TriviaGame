@@ -54,23 +54,28 @@ $(document).ready(function() {
     };
 
     var keys = Object.keys(questions);
-    var n = 0;
     var key = keys[n];
-
     var time = 30;
-    var correct = 0;
-    var wrong = 0;
-    var outOfTime = 0;
+    var n = 0;
+    var correctAnswerDiv = $("<div id='correct-answer'></div>");
+    var timeDiv = $("<div id='timeRemaining'><h3></h3></div>");
+    var questionDiv = $("<div id='question'><h3></h3></div>");
+    var answerDiv = $("<div id='answers'></div>");
 
-    $("#startButton").on("click", function() {
+    function game() {
         $("#startButton").css("display", "none");
+        $("h2").remove();
+
+        var correct = 0;
+        var wrong = 0;
+        var outOfTime = 0;
+        n = 0;
+        key = keys[n];
 
         var reset = function() {
-            var timeDiv = $("<div id='timeRemaining'><h3></h3></div>");
-            var questionDiv = $("<div id='question'><h3></h3></div>");
-            var answerDiv = $("<div id='answers'></div>");
             time = 30;
-            $("#main").empty();
+            $("#correct-answer").empty();
+            $("#correct-answer").remove();
             $("#main").append(timeDiv);
             $("#timeRemaining h3").html("Time Remaining: " + time);
             $("#main").append(questionDiv);
@@ -80,11 +85,7 @@ $(document).ready(function() {
         reset();
 
         function displayQAndA() {
-
-            $("#main").css("visibility", "visible");
-
             $("#question h3").html(questions[key].question);
-            console.log(questions[key].answers);
             for (var i = 0; i < questions[key].answers.length; i++) {
                 $("#answers").append("<p class='answer'>" + questions[key].answers[i] + "<p>");
             }
@@ -92,16 +93,26 @@ $(document).ready(function() {
                 var selected = $(this).text();
                 if (selected === questions[key].correct) {
                     clearInterval(counter);
-                    $("#main").html("<h1>That is Correct</h1>");
+                    $(timeDiv).remove();
+                    $(questionDiv).remove();
+                    $("#answers p").remove();
+                    $(answerDiv).remove();
+                    $("#main").append(correctAnswerDiv);
+                    $("#correct-answer").text("That is Correct");
                     correct++;
                 } else {
                     clearInterval(counter);
-                    $("#main").html("<h1>The correct answer was " + questions[key].correct + ".</h1>");
+                    $(timeDiv).remove();
+                    $(questionDiv).remove();
+                    $("#answers p").remove();
+                    $(answerDiv).remove();
+                    $("#main").append(correctAnswerDiv);
+                    $("#correct-answer").text("The correct answer was " + questions[key].correct + ".");
                     wrong++;
                 }
                 n++;
                 key = keys[n];
-                if (checkIfLast()){
+                if (checkIfLast()) {
                     displayFinalScore();
                 } else {
                     setTimeout(countReset, 3000);
@@ -120,11 +131,16 @@ $(document).ready(function() {
             $("#timeRemaining h3").html("Time Remaining: " + time);
             if (time < 1) {
                 clearInterval(counter);
-                $("#main").html("<h2>Out of time!</h2><h1>The correct answer was " + questions[key].correct + ".</h1>");
+                $(timeDiv).remove();
+                $(questionDiv).remove();
+                $("#answers p").remove();
+                $(answerDiv).remove();
+                $("#main").append(correctAnswerDiv);
+                $("#correct-answer").html("<h2>Out of time!</h2><h1>The correct answer was " + questions[key].correct + ".</h1>");
                 outOfTime++;
                 n++;
                 key = keys[n];
-                if (checkIfLast()){
+                if (checkIfLast()) {
                     displayFinalScore();
                 } else {
                     setTimeout(countReset, 3000);
@@ -138,21 +154,23 @@ $(document).ready(function() {
             counter = setInterval(count, 1000);
         }
 
-        function checkIfLast () {
+        function checkIfLast() {
             if (key === undefined) {
                 return true;
             }
             return false;
         }
 
-        function displayFinalScore () {
-            $("#main").empty();
-            $("#main").append("<h2>Correct Answers: " + correct + "</h2>");
-            $("#main").append("<h2>Wrong Answers: " + wrong + "</h2>");
-            $("#main").append("<h2>Ran out of time on: " + outOfTime + "</h2>");
-        }
-    });
+        function displayFinalScore() {
+            $("#correct-answer").remove();
+            $("#startButton").css("display", "inline");
+            $("#main").prepend("<h2>Ran out of time on: " + outOfTime + "</h2>");
+            $("#main").prepend("<h2>Wrong Answers: " + wrong + "</h2>");
+            $("#main").prepend("<h2>Correct Answers: " + correct + "</h2>");
 
-    //TODO need to make the last question show Correct/Incorrect/Out of time screen
+        }
+    };
+
+    $(document).on("click", "#startButton", game);
 
 });
