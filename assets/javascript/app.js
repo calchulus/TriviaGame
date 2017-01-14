@@ -167,7 +167,7 @@ $(document).ready(function() {
             $("#startButton").css("display", "inline");
             $("#main").prepend("<h2>Ran out of time on: " + outOfTime + "</h2>");
             $("#main").prepend("<h2>Wrong Answers: " + wrong + "</h2>");
-            $("#main").prepend("<h2>Correct Answers: " + correct + "</h2>");
+            $("#main").prepend("<h2 id='first'>Correct Answers: " + correct + "</h2>");
 
         }
     };
